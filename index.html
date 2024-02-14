@@ -9,8 +9,39 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="app">
-    <div class="panel scores">1</div>
+  <div id="app">
+    <div class="panel scores">
+      <div class="score">
+        <h1>
+          Jogador
+        </h1>
+        <div class="life-bar">
+          <div class="life"
+            :class="{danger: playerLife < 20}"
+            :style="{width: playerLife + '%'}"
+          >
+          </div>
+        </div>
+        <div>
+          {{ playerLife }}%
+        </div>
+      </div>
+      <div class="score">
+        <h1>
+          Monstro
+        </h1>
+        <div class="life-bar">
+          <div class="life"
+          :class="{danger: monsterLife < 20}"
+          :style="{width: monsterLife + '%'}"
+          >
+          </div>
+        </div>
+        <div>
+          {{ monsterLife }}%
+        </div>
+      </div>
+    </div>
     <div class="panel result">2</div>
     <div class="panel buttons">3</div>
     <div class="panel logs">4</div>
