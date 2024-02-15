@@ -49,3 +49,60 @@ html {
 .life-bar .life.danger {
   background-color: red;
 }
+
+/* Área do resultado */
+
+.result {
+  display: flex;
+  justify-content: center;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.result .win {
+  color: green;
+}
+
+.result .lose {
+  color: red;
+}
+
+/* Controle do jogo */
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  
+}
+
+.btn {
+  padding: 5px 10px;
+  margin: 0px 10px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+}
+
+.new-game {
+  background-color: #4253af;
+  color: #fff;
+}
+
+.attack {
+  background-color: #e51c23;
+  color: #fff;
+}
+
+.special-attack {
+  background-color: #ff9800;
+  color: #000;
+}
+
+.heal {
+  background-color: #259b24;
+  color: #fff;
+}
+
+.give-up {
+  background-color: #BBB;
+}

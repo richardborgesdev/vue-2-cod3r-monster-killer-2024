@@ -42,8 +42,33 @@
         </div>
       </div>
     </div>
-    <div class="panel result">2</div>
-    <div class="panel buttons">3</div>
+    <div class="panel result" v-if="hasResult">
+      <div class="win" v-if="monsterLife == 0">
+        Você ganhou!! :)
+      </div>
+      <div class="lose" v-else>
+        Você perdeu!! :(
+      </div>
+    </div>
+    <div class="panel buttons">
+      <template v-if="running">
+        <button class="btn attack">
+          Ataque
+        </button>
+        <button class="btn special-attack">
+          Ataque Especial
+        </button>
+        <button class="btn heal">
+          Curar
+        </button>
+        <button class="btn give-up" @click="running = false">
+          desistir
+        </button>
+      </template>
+      <button class="btn new-game" @click="startGame" v-else>
+        Iniciar Jogo
+      </button>
+    </div>
     <div class="panel logs">4</div>
   </div>
   <script src="app.js"></script>
