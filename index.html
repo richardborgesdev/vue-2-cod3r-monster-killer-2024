@@ -78,7 +78,13 @@
         Iniciar Jogo
       </button>
     </div>
-    <div class="panel logs">4</div>
+    <div class="panel logs" v-if="logs.length">
+      <ul>
+        <li v-for="log in logs" class="log" :class="log.classParam">
+          {{ log.text }}
+        </li>
+      </ul>
+    </div>
   </div>
   <script src="app.js"></script>
 </body>
